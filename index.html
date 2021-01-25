@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/proyectosPortfolio/form/style.css">
+    <title>Formulario de contacto</title>
+</head>
+<body>
+    <section id="seccion15" class="section">
+        <h2>Formulario de contacto con validaciones</h2>
+        
+        <form class="contacto-form">
+            <legend>Envianos tus comentarios</legend>
+            
+            <input type="text" placeholder="Escribe tu nombre" name="nombre" title="Solo acepta letras y espacios en blanco" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+
+            <input type="email" required placeholder="Escribe tu mail" title="Email incorrecto" name="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+
+            <input type="text" placeholder="Asunto a tratar" name="subject" required title="El asunto es requerido">
+
+            <textarea name="comments" rows="5" cols="50" required data-pattern="^.{1,255}$" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres"></textarea>
+
+            <input  type="submit" value="Enviar">
+            <div class="contact-form-loader none">
+                <img src="/proyectosPortfolio/form/assets/loader.svg" alt="Cargando">
+            </div>
+            <div class="contact-form-response none">
+                <p>Los datos han sido enviados</p>
+            </div>
+        </form>
+    </section>
+
+    <script src="/proyectosPortfolio/form/form.js"></script>
+</body>
+</html>
